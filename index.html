@@ -18,46 +18,49 @@
 
 <body>
     <header class="sticky top-0">
-        <nav class="flex bg-[#F9F7F3] flex-col items-center justify-center py-6 px-28 backdrop-blur-sm">
+        <nav class="flex bg-[#F9F7F3] flex-col items-center justify-between py-6 px-4 backdrop-blur-sm">
             <div class="navbar">
                 <div class="navbar-start">
                     <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Blog</button>
                 </div>
                 <div class="flex items-center justify-center gap-4 navbar-center">
                     <img src="assets/logo.png" alt="">
-                    <p class="text-xl font-semibold text-black font-lexend">Donate Bangladesh</p>
+                    <p class="hidden text-lg font-semibold text-black font-lexend lg:block">Donate Bangladesh</p>
                 </div>
-                <div class="navbar-end">
+                <div class="flex items-center gap-2 navbar-end">
                     <img src="assets/coin.png" alt="coin">
-                    <p class="text-[#111111B2] font-lexend font-medium text-xl"><span id="total-donation">5500</span>BDT
+                    <p class="text-[#111111B2] font-lexend font-medium text-lg"><span id="total-donation">5500</span>BDT
                     </p>
                 </div>
             </div>
         </nav>
 
         <div class="flex justify-center py-8 space-x-2 border-b backdrop-blur-3xl">
-            <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Donation</button>
-            <button class="btn bg-transparent text-xl font-semibold text-[#111111B2] font-lexend">History</button>
+            <button id="display-donation"
+                class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Donation</button>
+            <button id="display-history" class="btn text-xl font-semibold text-[#111111B2] font-lexend">History</button>
         </div>
 
     </header>
 
     <main>
-        <section class="flex flex-col items-center justify-center gap-8 py-20 bg-white px-36">
+        <section class="flex flex-col items-center justify-center gap-8 px-10 py-20 bg-white lg:px-36">
 
             <!-- Input section -->
-            <div class="space-y-8">
-                <div class="grid grid-cols-2 gap-8 p-8 border rounded-2xl">
+            <div id="donation" class="space-y-8">
+                <div class="grid gap-8 p-8 border lg:grid-cols-2 rounded-2xl">
                     <div>
                         <img src="assets/noakhali.png" alt="Noakhali">
                     </div>
                     <div class="flex flex-col gap-3">
-                        <div class="flex items-center gap-2 px-3 py-4 bg-[#1111110D] rounded-lg w-1/4">
+                        <div class="flex items-center gap-2 px-2 py-4 bg-[#1111110D] rounded-lg lg:w-1/4">
                             <img src="assets/coin.png" alt="coin">
                             <p class="text-[#111111B2] font-lexend text-base font-normal"><span
                                     id="noakhali-donation-amount">0</span> BDT</p>
                         </div>
-                        <h1 class="text-xl font-bold text-black font-lexend">Donate for Flood at Noakhali, Bangladesh
+                        <h1 class="text-xl font-bold text-black font-lexend">Donate for <span id="noakhali-name">Flood
+                                at Noakhali,
+                                Bangladesh</span>
                         </h1>
                         <p class="font-light font-lexend text-[#111111B2]"> The recent floods in Noakhali have caused
                             significant damage to
@@ -75,16 +78,18 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 p-8 border rounded-2xl">
+                <div class="grid gap-8 p-8 border lg:grid-cols-2 rounded-2xl">
                     <div>
                         <img src="assets/feni.png" alt="Feni">
                     </div>
                     <div class="flex flex-col gap-3">
-                        <div class="flex items-center gap-2 px-3 py-4 bg-[#1111110D] rounded-lg w-1/4">
+                        <div class="flex items-center gap-2 px-2 py-4 bg-[#1111110D] rounded-lg lg:w-1/4">
                             <img src="assets/coin.png" alt="coin">
-                            <p class="text-[#111111B2] font-lexend text-base font-normal">600 BDT</p>
+                            <p class="text-[#111111B2] font-lexend text-base font-normal"><span
+                                    id="feni-donation-amount">0</span> BDT</p>
                         </div>
-                        <h1 class="text-xl font-bold text-black font-lexend">Donate for Flood Relief in Feni,Bangladesh
+                        <h1 class="text-xl font-bold text-black font-lexend">Donate for <span id="feni-name">Flood
+                                Relief in Feni,Bangladesh</span>
                         </h1>
                         <p class="font-light font-lexend text-[#111111B2]"> The recent floods in Feni have devastated
                             local
@@ -103,16 +108,18 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 p-8 border rounded-2xl">
+                <div class="grid gap-8 p-8 border lg:grid-cols-2 rounded-2xl">
                     <div>
                         <img src="assets/quota-protest.png" alt="Quota-protest">
                     </div>
                     <div class="flex flex-col gap-3">
-                        <div class="flex items-center gap-2 px-2 py-4 bg-[#1111110D] rounded-lg w-1/4">
+                        <div class="flex items-center gap-2 px-2 py-4 bg-[#1111110D] rounded-lg lg:w-1/4">
                             <img src="assets/coin.png" alt="coin">
-                            <p class="text-[#111111B2] font-lexend text-base font-normal">2400 BDT</p>
+                            <p class="text-[#111111B2] font-lexend text-base font-normal"><span
+                                    id="quota-donation-amount">0</span> BDT</p>
                         </div>
-                        <h1 class="text-xl font-bold text-black font-lexend">Aid for Injured in the Quota Movement</h1>
+                        <h1 class="text-xl font-bold text-black font-lexend">Aid for <span id="quota-name">Injured in
+                                the Quota Movement</span></h1>
                         <p class="font-light font-lexend text-[#111111B2]">The recent Quota movement has resulted in
                             numerous injuries and significant hardship for many individuals. Your support is crucial in
                             providing medical assistance, rehabilitation, and necessary supplies to those affected. By
@@ -132,12 +139,8 @@
             </div>
 
             <!-- History Section -->
-            <div id="history" class="w-full border rounded-2xl">
-                <div class="p-8">
-                    <h1 class="text-xl font-bold text-black font-lexend">96500 Taka is Donated for famine-2024 at Feni,
-                        Bangladesh</h1>
-                    <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-                </div>
+            <div id="history" class="w-full">
+
             </div>
 
 
@@ -160,7 +163,7 @@
         </section>
     </main>
 
-    <footer class="p-12">
+    <footer class="p-12 bg-[#F9F7F3]">
 
     </footer>
 
