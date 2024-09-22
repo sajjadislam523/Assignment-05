@@ -16,10 +16,9 @@
     <title>Donate Bangladesh</title>
 </head>
 
-<body class="bg-[#F9F7F3]">
-
-    <main>
-        <nav class="flex items-center justify-center py-6 px-28">
+<body>
+    <header class="sticky top-0">
+        <nav class="flex bg-[#F9F7F3] flex-col items-center justify-center py-6 px-28 backdrop-blur-sm">
             <div class="navbar">
                 <div class="navbar-start">
                     <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Blog</button>
@@ -30,17 +29,21 @@
                 </div>
                 <div class="navbar-end">
                     <img src="assets/coin.png" alt="coin">
-                    <p class="text-[#111111B2] font-lexend font-medium text-xl"><span>5500</span>BDT</p>
+                    <p class="text-[#111111B2] font-lexend font-medium text-xl"><span id="total-donation">5500</span>BDT
+                    </p>
                 </div>
             </div>
         </nav>
 
-        <section class="flex flex-col items-center justify-center gap-8 py-20 bg-white px-36">
+        <div class="flex justify-center py-8 space-x-2 border-b backdrop-blur-3xl">
+            <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Donation</button>
+            <button class="btn bg-transparent text-xl font-semibold text-[#111111B2] font-lexend">History</button>
+        </div>
 
-            <div class="space-x-2">
-                <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Donation</button>
-                <button class="btn bg-transparent text-xl font-semibold text-[#111111B2] font-lexend">History</button>
-            </div>
+    </header>
+
+    <main>
+        <section class="flex flex-col items-center justify-center gap-8 py-20 bg-white px-36">
 
             <!-- Input section -->
             <div class="space-y-8">
@@ -51,7 +54,8 @@
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-2 px-3 py-4 bg-[#1111110D] rounded-lg w-1/4">
                             <img src="assets/coin.png" alt="coin">
-                            <p class="text-[#111111B2] font-lexend text-base font-normal">0 BDT</p>
+                            <p class="text-[#111111B2] font-lexend text-base font-normal"><span
+                                    id="noakhali-donation-amount">0</span> BDT</p>
                         </div>
                         <h1 class="text-xl font-bold text-black font-lexend">Donate for Flood at Noakhali, Bangladesh
                         </h1>
@@ -63,9 +67,10 @@
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts
                             and making a positive impact on the lives of those in need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="noakhali-donation" type="text" placeholder="Write Donation Amount"
                             class="p-4 border rounded-lg focus:outline-none placeholder:font-lexend">
-                        <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
+                        <button id="noakhali-donate"
+                            class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
                             Now</button>
                     </div>
                 </div>
@@ -90,9 +95,10 @@
                             disaster. Every contribution counts towards making a real difference. Please consider
                             donating
                             today to assist those in urgent need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="feni-donation" type="text" placeholder="Write Donation Amount"
                             class="p-4 border rounded-lg focus:outline-none placeholder:font-lexend">
-                        <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
+                        <button id="feni-donate"
+                            class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
                             Now</button>
                     </div>
                 </div>
@@ -116,22 +122,40 @@
                             suffering
                             and aiding in their recovery. Please consider making a donation to support these brave
                             individuals in their time of need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="quota-donation" type="text" placeholder="Write Donation Amount"
                             class="p-4 border rounded-lg focus:outline-none placeholder:font-lexend">
-                        <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
+                        <button id="quota-donate"
+                            class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- History Section -->
-            <div class="">
+            <div id="history" class="w-full border rounded-2xl">
                 <div class="p-8">
-                    <h1 class="text-xl font-bold text-black font-lexend">History</h1>
+                    <h1 class="text-xl font-bold text-black font-lexend">96500 Taka is Donated for famine-2024 at Feni,
+                        Bangladesh</h1>
                     <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
                 </div>
-
             </div>
+
+
+            <!-- Modal section -->
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="text-center modal-box">
+                    <h3 class="text-lg font-bold">Congratulations!</h3>
+                    <p class="py-4">You Have Donated for Humankind</p>
+                    <h3 class="text-lg font-bold">Successfully</h3>
+                    <div class="flex items-center justify-center modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close Confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
 
         </section>
     </main>
@@ -140,7 +164,7 @@
 
     </footer>
 
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
