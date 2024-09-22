@@ -50,14 +50,18 @@ function handleDonation(dontionInputId, donationAmountId, donationNameId, totalD
         ? totalDonation - donationValue
         : 0;
 
+    const currentDate = new Date();
+    const localDate = currentDate.toLocaleDateString();
+    const localTime = currentDate.toLocaleTimeString();
+
     const history = document.getElementById("history");
     const donationName = document.getElementById(donationNameId);
     const div = document.createElement("div");
     div.innerHTML = `
     <div class="p-8 border rounded-2xl my-4">
         <h1 class="text-xl font-bold text-black font-lexend">${donationValue} Taka is Donated for ${donationName.innerText}</h1>
-        <p>Date: ${new Date().toLocaleDateString()}</p>
-    </div>
+        <p>Date: ${localDate} Time: ${localTime}</p >
+    </div >
     `;
     history.insertBefore(div, history.firstChild);
 }
