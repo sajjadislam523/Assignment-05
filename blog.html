@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Blog</title>
+</head>
+
+<body>
+    <header class="sticky top-0"></header>
+    <nav class="flex bg-[#F9F7F3] flex-col items-center justify-between py-6 px-4 backdrop-blur-sm">
+        <div class="navbar">
+            <div class="navbar-start">
+                <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend"><a
+                        href="index.html">Home</a></button>
+            </div>
+            <div class="flex items-center justify-center gap-4 navbar-center">
+                <img src="assets/logo.png" alt="">
+                <p class="hidden text-lg font-semibold text-black font-lexend lg:block">Donate Bangladesh</p>
+            </div>
+            <div class="flex items-center gap-2 navbar-end">
+                <img src="assets/coin.png" alt="coin">
+                <p class="text-[#111111B2] font-lexend font-medium text-lg"><span id="total-donation">5500</span>BDT
+                </p>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <section class="flex flex-col items-center justify-center gap-8 px-10 py-20 bg-white lg:px-20">
+
+            <h1>Important FAQ</h1>
+
+            <!-- Accordion about question and answer -->
+            <div class="border collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="text-xl font-medium collapse-title">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the
+                        structure of a web page as a tree of objects that developers can manipulate using JavaScript or
+                        other programming languages.</p>
+                </div>
+            </div>
+            <div class="border collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="text-xl font-medium collapse-title">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>There are several ways to select an element from the DOM. Using getElementById,
+                        getElementByClassName, getElementsByTagName and more</p>
+                </div>
+            </div>
+            <div class="border collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="text-xl font-medium collapse-title">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation leverages event bubbling to efficiently manage events for multiple child
+                        elements by attaching a single event listener to their common ancestor. It is especially useful
+                        in cases where you have a large number of elements or dynamically added content, providing both
+                        performance benefits and easier maintenance.</p>
+                </div>
+            </div>
+            <div class="border collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="text-xl font-medium collapse-title">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>Attributes: Use getAttribute(), setAttribute(), and removeAttribute() to manage element
+                        attributes, or directly modify properties like element.src. <br>
+                        Classes: Use the classList property for adding, removing, toggling, or checking classes. <br>
+                        Styles: Use the style property to set inline styles, and getComputedStyle() to retrieve the
+                        rendered styles.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
