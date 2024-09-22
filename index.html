@@ -35,10 +35,34 @@
             </div>
         </nav>
 
-        <section class="flex items-center justify-center py-20 px-36">
-            <div class="">
+        <section class="flex flex-col items-center justify-center gap-8 py-20 px-36">
+            <div class="space-x-2">
                 <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">Donation</button>
-                <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend">History</button>
+                <button class="btn bg-transparent text-xl font-semibold text-[#111111B2] font-lexend">History</button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 p-8 border rounded-2xl">
+                <div>
+                    <img src="assets/noakhali.png" alt="Noakhali">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-4 px-3 py-4 bg-[#1111110D] rounded-lg w-[25%]">
+                        <img src="assets/coin.png" alt="coin">
+                        <p class="text-[#111111B2] font-lexend text-base font-normal">0 BDT</p>
+                    </div>
+                    <h1 class="text-xl font-bold text-black font-lexend">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="font-light font-lexend text-[#111111B2]"> The recent floods in Noakhali have caused
+                        significant damage to
+                        homes
+                        infrastructure. Your
+                        donation will help provide essential supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes difference. Please join us in supporting the relief efforts
+                        and making a positive impact on the lives of those in need.</p>
+                    <input type="text" placeholder="Write Donation Amount"
+                        class="p-4 border rounded-lg focus:outline-none placeholder:font-lexend">
+                    <button class="btn bg-[#B4F461] text-xl font-semibold text-black font-lexend w-full">Donate
+                        Now</button>
+                </div>
             </div>
         </section>
     </main>
